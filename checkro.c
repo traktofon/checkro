@@ -14,7 +14,7 @@ int main(int argc, char* argv[]) {
     }
 
     retval = statvfs(argv[1], &buf);
-    
+
     if (retval != 0) {
         fprintf(stderr, "failed to check filesystem '%s': %s\n", argv[1], strerror(errno));
         exit(1);
